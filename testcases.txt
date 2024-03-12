@@ -1,0 +1,49 @@
+1.Get User Details (Valid User ID):
+
+Input: Valid user ID (existing in the system).
+Expected Output: Successful retrieval of user details with status code 200.
+Expected Header: X-Rate-Limit-Limit and X-Rate-Limit-Remaining headers with appropriate values.
+Verify the correctness of the returned user details.
+
+2.Get User Details (Invalid User ID):
+
+Input: Invalid user ID (not existing in the system).
+Expected Output: Failure to retrieve user details with status code 404.
+Ensure that an appropriate error message is returned.
+
+3.Create User (Valid Data):
+
+Input: Valid user details (first name, last name, email, and age).
+Expected Output: Successful creation of a new user with status code 201.
+Ensure that the response contains the newly created user details.
+Verify that the Location header contains the URI of the newly created resource.
+
+4.Create User (Invalid Data):
+
+Input: Invalid user details (missing or invalid fields).
+Expected Output: Failure to create a new user with status code 400.
+Ensure that an appropriate error message is returned, indicating the reason for the failure.
+
+5.Update User Details (Valid User ID and Data):
+
+Input: Valid user ID and updated user details.
+Expected Output: Successful update of user details with status code 200.
+Verify that the response contains the updated user details.
+
+6.Update User Details (Invalid User ID):
+
+Input: Invalid user ID (not existing in the system) and updated user details.
+Expected Output: Failure to update user details with status code 404.
+Ensure that an appropriate error message is returned.
+
+7.Delete User (Valid User ID):
+
+Input: Valid user ID (existing in the system).
+Expected Output: Successful deletion of the user with status code 204.
+Verify that the user is no longer present in the system after deletion.
+
+8.Delete User (Invalid User ID):
+
+Input: Invalid user ID (not existing in the system).
+Expected Output: Failure to delete user with status code 404.
+Ensure that an appropriate error message is returned.
