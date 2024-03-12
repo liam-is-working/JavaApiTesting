@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "12346395-06c2-497e-9689-a71505a34aee",
+		"name": "wiremock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create mapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request\": {\r\n        \"method\": \"GET\",\r\n        \"url\": \"/store\"\r\n    },\r\n    \"response\": {\r\n        \"status\": 200,\r\n        \"headers\": {\r\n            \"Content-Type\": \"application/json\"\r\n        },\r\n        \"jsonBody\": {\r\n            \"store\": {\r\n                \"book\": [\r\n                    {\r\n                        \"price\": 5,\r\n                        \"title\": \"Sayings of the Century\"\r\n                    },\r\n                    {\r\n                        \"price\": 5,\r\n                        \"title\": \"Moby Dick\"\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/__admin/mappings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"__admin",
+						"mappings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all mappings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/__admin/mappings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"__admin",
+						"mappings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save mapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/__admin/mappings/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"__admin",
+						"mappings",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
